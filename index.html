@@ -61,25 +61,55 @@
         .celebration {
             font-size: 1.8em;
         }
+
+        /* Fiore  */
+#start::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,0.25) 40%, transparent 41%),
+        radial-gradient(circle at 100% 50%, rgba(255,255,255,0.25) 40%, transparent 41%),
+        radial-gradient(circle at 50% 100%, rgba(255,255,255,0.25) 40%, transparent 41%),
+        radial-gradient(circle at 0% 50%, rgba(255,255,255,0.25) 40%, transparent 41%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.35) 35%, transparent 36%);
+    border-radius: 50%;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+
+#start {
+    position: relative;
+    overflow: hidden;
+}
+
+#start * {
+    position: relative;
+    z-index: 1;
+}
     </style>
 </head>
 <body>
 
-    <!-- SCHERMATA INIZIALE -->
+    <!-- schermata inizio -->
     <div class="card" id="start">
         <h1>💖 Vuoi essere la mia Valentina? 💖</h1>
         <button class="yes" onclick="sayYes()">Sì 😍</button>
         <button class="no" onclick="sayNo()">No 🙄</button>
     </div>
 
-    <!-- SCHERMATA SI -->
+    <!-- schermata del si -->
     <div class="card hidden" id="yesScreen">
         <h1 class="celebration">🎉 EVVAIIII 🎉</h1>
         <p>Sapevo che avresti accettato (anche perché eri obbligata🤣🤣)❤️</p>
         <p>Buon San Valentino 💘</p>
     </div>
 
-    <!-- SCHERMATA NO -->
+    <!-- schermata del no -->
     <div class="card hidden" id="noScreen">
         <h1>😏 Eeeee... Ti attacchi</h1>
         <p>La risposta è comunque <strong>SÌ</strong> ❤️</p>
